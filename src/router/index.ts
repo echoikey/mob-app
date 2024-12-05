@@ -7,8 +7,12 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/dashboard',
+    redirect: '/Home',
   },
+  {
+    path: '/Home',
+    component: () => import('@/views/Home.vue')
+  }
 ]
 
 const router = createRouter({

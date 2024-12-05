@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h2>后台管理面板</h2>
+  <h1>Hello, World</h1>
 </template>
 
 <style scoped>

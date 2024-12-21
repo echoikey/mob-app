@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': 'src',
-      "~": 'src/assets'
+      '@': '/src',
+      "~": '/src/assets'
     },
     extensions: ['.ts', '.tsx', '.mjs', '.js', '.jsx', '.json', '.vue']
   },

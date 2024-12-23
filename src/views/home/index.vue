@@ -1,7 +1,7 @@
 <template>
 </template>
 
-<script setup>
+<script setup lant="ts" name="Home">
 </script>
 <style scoped>
 

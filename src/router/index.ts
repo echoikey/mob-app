@@ -1,41 +1,43 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import Layout from '@/layouts/Layout.vue';
+import Home from '@/views/Home.vue';
 
 // 公共路由
 const constantRoutes: RouteRecordRaw[] = [
   {
-    path: '/redirect',
-    component: Layout,
-    children: [
-      {
-        path: '/redirect/:path(.*)',
-        component: () => import('@/views/redirect.vue')
-      }
-    ],
-    meta: { hidden: true }
+    path: '/',
+    redirect: '/dashboard'
   },
   {
-    path: '',
-    component: Layout,
-    redirect: 'index',
+    path: '/',
+    name: 'Home',
+    component: Home,
     children: [
       {
-        path: 'index',
-        component: () => import('@/views/home/index.vue'),
-        name: 'Index',
-        meta: { title: '首页', icon: 'dashboard', affix: true },
-      },
-    ],
+        path: 'dashboard',
+        name: 'dashboard',
+        meta: {
+          title: '系统首页',
+          noAuth: true,
+        },
+        component: () => import('@/views/Dashboard.vue')
+      }
+    ]
   },
   {
     path: '/404',
+    meta: {
+      title: '找不到页面',
+      noAuth: true,
+    },
     component: () => import('@/views/error/404.vue'),
-    meta: { hidden: true },
   },
   {
     path: '/401',
+    meta: { 
+      title: '没有权限',
+      noAuth: true,
+    },
     component: () => import('@/views/error/401.vue'),
-    meta: { hidden: true },
   },
 ]
 

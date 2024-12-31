@@ -4,7 +4,7 @@
     <div class="header-left">
       <img class="logo" src="../assets/img/logo.svg" alt="" />
       <div class="web-title">后台管理系统</div>
-      <div class="collapse-btn" @click="collapseChage">
+      <div class="collapse-btn" @click="collapseChange">
         <el-icon v-if="sidebar.collapse">
           <Expand />
         </el-icon>
@@ -63,7 +63,7 @@
 import { onMounted } from 'vue';
 import { useSidebarStore } from '@/store/sidebar';
 import { useRouter } from 'vue-router';
-import imgUrl from '@/assets/img/img.jpg';
+import imgUrl from '@/assets/img/avator.jpg';
 
 const username: string | null = localStorage.getItem('vuems_name');
 const message: number = 2;
@@ -128,6 +128,7 @@ const setFullScreen = () => {
 .web-title {
     margin: 0 40px 0 10px;
     font-size: 22px;
+    color: #333333;
 }
 
 .collapse-btn {

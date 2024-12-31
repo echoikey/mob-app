@@ -1,5 +1,5 @@
 <template>
-  <dic class="sidebar">
+  <div class="sidebar">
     <el-menu
       class="sidebar-el-menu"
       :default-active="onRoutes"
@@ -10,7 +10,7 @@
     >
       <template v-for="item in menuData">
         <template v-if="item.children">
-          <el-sub-menu :index="item.index" :key="item.index" v-permiss="item.id">
+          <el-sub-menu :index="item.index" :key="item.index">
             <template #title>
               <el-icon>
                 <component :is="item.icon"></component>
@@ -20,9 +20,8 @@
             <template v-for="subItem in item.children">
               <el-sub-menu
                 v-if="subItem.children"
-                :indexe="subItem.index"
+                :index="subItem.index"
                 :key="subItem.index"
-                v-permiss="item.id"
               >
                 <template #title>{{ subItem.title }}</template>
                 <el-menu-item
@@ -33,14 +32,14 @@
                   {{ threeItem.index }}
                 </el-menu-item>
               </el-sub-menu>
-              <el-menu-item v-else :index="subItem.index" v-permiss="item.id">
+              <el-menu-item v-else :index="subItem.index">
                 {{ subItem.title }}
               </el-menu-item>
             </template>"
           </el-sub-menu>
         </template>
         <template v-else>
-          <el-menu-item :index="item.index" :key="item.index" v-permiss="item.id">
+          <el-menu-item :index="item.index" :key="item.index">
             <el-icon>
               <component :is="item.icon"></component>
             </el-icon>
@@ -49,7 +48,7 @@
         </template>
       </template>
     </el-menu>
-  </dic>
+  </div>
 
 </template>
 

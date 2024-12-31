@@ -20,6 +20,15 @@ const constantRoutes: RouteRecordRaw[] = [
           noAuth: true,
         },
         component: () => import('@/views/Dashboard.vue')
+      },
+      {
+        path: '/system-user',
+        name: 'system-user',
+        meta: {
+          title: '用户管理',
+          permiss: '11',
+        },
+        component: () => import('@/views/system/user.vue')
       }
     ]
   },

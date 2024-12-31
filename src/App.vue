@@ -9,6 +9,6 @@ const theme = useThemeStore();
 theme.initTheme();
 </script>
 
-<style scoped>
+<style>
 @import './assets/css/main.css';
 </style>

@@ -12,13 +12,16 @@
    > `setup` 函数中的 `this` 是 `undefined`。
 
 ```vue
-<template></template>
+<template>
+	<h2>{{ count }}</h2>
+	<button @click="increment">增加</button>
+</template>
 <script>
     export default {
         name: 'HelloWorld',
         // setup函数返回一个渲染函数，返回的内容直接被渲染在页面上
         setup() {
-            const count = 0;
+            let count = 0;
             
             // setup 返回一个渲染函数
             return function() {
@@ -33,7 +36,14 @@
             return () => count;
         }
     }
-
+</script>
+// setup 语法糖
+<script setup>
+	const count = 0;
+    
+    function increment() {
+        count += 1;
+    }
 </script>
 ```
 

@@ -28,7 +28,7 @@ const constantRoutes: RouteRecordRaw[] = [
           title: '用户管理',
           permiss: '11',
         },
-        component: () => import('@/views/system/user.vue')
+        component: () => import('@/views/system/user/index.vue')
       }
     ]
   },

@@ -3,7 +3,7 @@
     <!-- 折叠按钮 -->
     <div class="header-left">
       <img class="logo" src="../assets/img/logo.svg" alt="" />
-      <div class="web-title">后台管理系统</div>
+      <div class="web-title">天工格物</div>
       <div class="collapse-btn" @click="collapseChange">
         <el-icon v-if="sidebar.collapse">
           <Expand />
@@ -15,7 +15,7 @@
     </div>
     <div class="header-right">
       <div class="header-user-con">
-        <div class="btn-icon" @click="router.push('/theme')">
+        <!-- <div class="btn-icon" @click="router.push('/theme')">
           <el-tooltip effect="dark" content="设置主题" placement="bottom">
             <i class="el-icon-lx-skin"></i>
           </el-tooltip>
@@ -30,25 +30,25 @@
           <el-tooltip effect="dark" content="全屏" placement="bottom">
             <i class="el-icon-lx-full"></i>
           </el-tooltip>
-        </div>
-        <!-- 用户头像 -->
-        <el-avatar class="user-avator" :size="30" :src="imgUrl" />
+        </div> -->
         <!-- 用户名下拉菜单 -->
         <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-          <span class="el-dropdown-link">
+          <!-- 用户头像 -->
+          <el-avatar class="user-avator" :size="30" :src="imgUrl" />
+          <!-- <span class="el-dropdown-link">
             {{ username }}
             <el-icon class="el-icon--right">
               <arrow-down />
             </el-icon>
-          </span>
+          </span> -->
           <template #dropdown>
             <el-dropdown-menu>
-              <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
+              <!-- <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
                 <el-dropdown-item>项目仓库</el-dropdown-item>
               </a>
               <a href="https://lin-xin.gitee.io/example/vuems-doc/" target="_blank">
                 <el-dropdown-item>官方文档</el-dropdown-item>
-              </a>
+              </a> -->
               <el-dropdown-item command="user">个人中心</el-dropdown-item>
               <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
@@ -109,9 +109,11 @@ const setFullScreen = () => {
     box-sizing: border-box;
     width: 100%;
     height: 70px;
+    font-family: "GothamBook","苹方-简  ","苹方","PingFang SC","微软雅黑";
     color: var(--header-text-color);
     background-color: var(--header-bg-color);
     border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
 .header-left {

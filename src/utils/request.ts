@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosError, AxiosResponse, InternalAxiosRequestCo
 
 // 创建 axios 实例
 const service: AxiosInstance = axios.create({
-  baseURL: 'http://10.240.7.4:8201/api',
+  baseURL: 'http://192.168.77.9:8201/api',
   timeout: 5000
 });
 

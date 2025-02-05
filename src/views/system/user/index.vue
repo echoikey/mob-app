@@ -1,7 +1,7 @@
 <template>
 </template>
 <script setup lang="ts">
-import { fetchUsers } from '@/api/user';
+import { fetchUsers } from '@/api/system/user';
 
 const getData = async () => {
   const res = await fetchUsers();

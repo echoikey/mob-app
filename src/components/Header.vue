@@ -2,8 +2,8 @@
   <div class="header">
     <!-- 折叠按钮 -->
     <div class="header-left">
-      <img class="logo" src="../assets/img/logo.svg" alt="" />
-      <div class="web-title">天工格物</div>
+      <!-- <img class="logo" src="../assets/img/logo.svg" alt="" />
+      <div class="web-title">天工格物</div> -->
       <div class="collapse-btn" @click="collapseChange">
         <el-icon v-if="sidebar.collapse">
           <Expand />
